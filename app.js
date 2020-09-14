@@ -24,7 +24,6 @@ let getWeather = async () => {
   const geoData = await geoResponse.json();
   lat = geoData.results[0].geometry.lat;
   long = geoData.results[0].geometry.lng;
-  // console.log(lat, long);
 
   const weatherURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&
 exclude=minutely,hourly&appid=${weatherKey}`;
@@ -32,7 +31,6 @@ exclude=minutely,hourly&appid=${weatherKey}`;
   const weatherResponse = await fetch(weatherURL);
 
   const weatherData = await weatherResponse.json();
-  console.log(weatherData);
 
   // current conditions variables
   const currentDesc = weatherData.current.weather[0].main;
@@ -148,11 +146,15 @@ exclude=minutely,hourly&appid=${weatherKey}`;
       document.querySelector('.current-display__icon--img').src = 'images/animated/drizzle.svg';
       document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
       document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.current-display__icon--img').src = 'images/animated/rainy.svg';
       document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
       document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.current-display__icon--img').src = 'images/animated/snowy.svg';
@@ -164,11 +166,15 @@ exclude=minutely,hourly&appid=${weatherKey}`;
       document.querySelector('.current-display__icon--img').src = 'images/animated/foggy.jpg';
       document.querySelector('.current-display__background').src = 'images/backgrounds/fog.jpg';
       document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.current-display__icon--img').src = 'images/animated/day.svg';
       document.querySelector('.current-display__background').src = 'images/backgrounds/clear-day.jpg';
       document.querySelector('.current-display__background').style.filter = 'brightness(90%)';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.current-display__icon--img').src = 'images/animated/cloudy.svg';
@@ -188,10 +194,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-1-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-1-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-1-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-1-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-1-icon').src = 'images/animated/snowy.svg';
@@ -201,10 +211,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-1-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-1-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-1-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-1-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-1-icon').src = 'images/animated/cloudy.svg';
@@ -224,10 +238,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-2-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-2-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-2-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-2-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-2-icon').src = 'images/animated/snowy.svg';
@@ -237,10 +255,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-2-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-2-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-2-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-2-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-2-icon').src = 'images/animated/cloudy.svg';
@@ -260,10 +282,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-3-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-3-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-3-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-3-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-3-icon').src = 'images/animated/snowy.svg';
@@ -273,10 +299,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-3-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-3-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-3-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-3-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-3-icon').src = 'images/animated/cloudy.svg';
@@ -296,10 +326,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-4-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-4-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-4-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-4-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-4-icon').src = 'images/animated/snowy.svg';
@@ -309,10 +343,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-4-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-4-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-4-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-4-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-4-icon').src = 'images/animated/cloudy.svg';
@@ -332,10 +370,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-5-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-5-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-5-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-5-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-5-icon').src = 'images/animated/snowy.svg';
@@ -345,10 +387,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-5-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-5-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-5-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-5-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-5-icon').src = 'images/animated/cloudy.svg';
@@ -368,10 +414,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-6-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-6-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-6-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-6-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-6-icon').src = 'images/animated/snowy.svg';
@@ -381,10 +431,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-6-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-6-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-6-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-6-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-6-icon').src = 'images/animated/cloudy.svg';
@@ -404,10 +458,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case 'Drizzle':
       document.querySelector('.day-7-icon').src = 'images/animated/drizzle.svg';
       document.querySelector('.day-7-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Rain':
       document.querySelector('.day-7-icon').src = 'images/animated/rainy.svg';
       document.querySelector('.day-7-bg').src = 'images/backgrounds/rain.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Snow':
       document.querySelector('.day-7-icon').src = 'images/animated/snowy.svg';
@@ -417,10 +475,14 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
       document.querySelector('.day-7-icon').src = 'images/animated/foggy.jpg';
       document.querySelector('.day-7-bg').src = 'images/backgrounds/fog.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clear':
       document.querySelector('.day-7-icon').src = 'images/animated/day.svg';
       document.querySelector('.day-7-bg').src = 'images/backgrounds/clear-day.jpg';
+      document.querySelector('.current-display').style.color = '#333';
+
       break;
     case 'Clouds':
       document.querySelector('.day-7-icon').src = 'images/animated/cloudy.svg';

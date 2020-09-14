@@ -1,0 +1,131 @@
+s<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Weather.App</title>
+  </head>
+  <body>
+    <div class="display-area">
+      <img src="/images/backgrounds/clear-day.jpg" class="current-display__background" alt="" />
+
+      <div class="input-area">
+        <form class="input-area__form" autocomplete="off" onsubmit="return false;">
+          <input type="text" class="input-area__city" placeholder="City" required />
+          <input type="text" class="input-area__state" placeholder="State" required />
+          <button type="submit" value="Reset" class="input-area__button" onclick="getWeather();">Check Weather</button>
+        </form>
+      </div>
+
+      <div class="current-display">
+        <div class="current-display__date"></div>
+        <div class="current-display__location"></div>
+        <div class="current-display__desc"></div>
+        <div class="current-display__temp"><span class="current-display__temp--main"></span><span class="current-display__temp--feels"></span></div>
+        <div class="current-display__icon">
+          <img src="/images/animated/day.svg" class="current-display__icon--img" alt="icon" />
+        </div>
+
+        <div class="current-display__hum"></div>
+        <div class="current-display__wind">
+          <span class="current-display__wind--speed"></span>
+          <span class="current-display__wind--dir"></span>
+        </div>
+      </div>
+
+      <div class="forecast">
+        <div class="row forecast__display">
+          <div class="forecast__card forecast__card--day-1">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-1-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-1"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-1-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-1"></div>
+            <div class="forecast__card--hi hi-day-1"></div>
+            <div class="forecast__card--low low-day-1"></div>
+          </div>
+          <div class="forecast__card forecast__card--day-2">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-2-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-2"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-2-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-2"></div>
+            <div class="forecast__card--hi hi-day-2"></div>
+            <div class="forecast__card--low low-day-2"></div>
+          </div>
+          <div class="forecast__card forecast__card--day-3">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-3-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-3"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-3-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-3"></div>
+            <div class="forecast__card--hi hi-day-3"></div>
+            <div class="forecast__card--low low-day-3"></div>
+          </div>
+          <div class="forecast__card forecast__card--day-4">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-4-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-4"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-4-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-4"></div>
+            <div class="forecast__card--hi hi-day-4"></div>
+            <div class="forecast__card--low low-day-4"></div>
+          </div>
+          <div class="forecast__card forecast__card--day-5">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-5-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-5"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-5-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-5"></div>
+            <div class="forecast__card--hi hi-day-5"></div>
+            <div class="forecast__card--low low-day-5"></div>
+          </div>
+          <div class="forecast__card forecast__card--day-6">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-6-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-6"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-6-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-6"></div>
+            <div class="forecast__card--hi hi-day-6"></div>
+            <div class="forecast__card--low low-day-6"></div>
+          </div>
+          <div class="forecast__card forecast__card--day-7">
+            <div class="forecast__card--background">
+              <img src="/images/backgrounds/clear-day.jpg" class="forecast__card--background__img day-7-bg" alt="" />
+            </div>
+            <div class="forecast__card--date date-7"></div>
+            <div class="forecast__card--icon">
+              <img src="/images/animated/day.svg" class="forecast__card--icon__img day-7-icon" alt="" />
+            </div>
+            <div class="forecast__card--desc desc-7"></div>
+            <div class="forecast__card--hi hi-day-7"></div>
+            <div class="forecast__card--low low-day-7"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

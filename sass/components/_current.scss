@@ -1,0 +1,109 @@
+.current-display {
+  position: relative;
+  width: 100%;
+  height: 60%;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+  }
+
+  &__date {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5rem;
+    width: 125rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.4);
+  }
+
+  &__location {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5rem;
+    width: 35rem;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.4);
+  }
+
+  &__desc {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    height: 5rem;
+    width: 35rem;
+    font-size: 3rem;
+    text-align: right;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.4);
+  }
+
+  &__temp {
+    position: absolute;
+    top: 48%;
+    left: 5%;
+    height: 25rem;
+    width: 35rem;
+    font-size: 3rem;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.4);
+
+    &--main {
+      display: block;
+      margin-bottom: 8rem;
+      text-align: right;
+    }
+
+    &--feels {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25rem;
+    width: 25rem;
+
+    &--img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__hum {
+    position: absolute;
+    top: 35%;
+    left: 69%;
+    height: 5rem;
+    width: 35rem;
+    font-size: 3rem;
+    text-align: left;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.4);
+  }
+
+  &__wind {
+    position: absolute;
+    top: 60%;
+    left: 69%;
+    height: 5rem;
+    width: 35rem;
+    font-size: 3rem;
+    text-align: left;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.4);
+  }
+}

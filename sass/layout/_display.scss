@@ -1,0 +1,11 @@
+.display-area {
+  background-color: $color-gray-light-1;
+  width: 80vw;
+  height: 95vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  overflow: hidden;
+}

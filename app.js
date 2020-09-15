@@ -59,53 +59,34 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     return 'N';
   }
 
-  switch (currentDesc) {
-    case 'Thunderstorm':
-      document.querySelector('.current-display__icon--img').src = 'images/animated/thunder.svg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/storm.jpg';
-      document.querySelector('.current-display__color').style.color = '#fff';
-      document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
-      break;
-    case 'Drizzle':
-      document.querySelector('.current-display__icon--img').src = 'images/animated/drizzle.svg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
-      document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
-      document.querySelector('.current-display__color').style.color = '#333';
-
-      break;
-    case 'Rain':
-      document.querySelector('.current-display__icon--img').src = 'images/animated/rainy.svg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
-      document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
-      document.querySelector('.current-display__color').style.color = '#333';
-
-      break;
-    case 'Snow':
-      document.querySelector('.current-display__icon--img').src = 'images/animated/snowy.svg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/snow.jpg';
-      document.querySelector('.current-display__color').style.color = '#fff';
-      document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
-      break;
-    case ('Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall', 'Tornado'):
-      document.querySelector('.current-display__icon--img').src = 'images/animated/foggy.jpg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/fog.jpg';
-      document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
-      document.querySelector('.current-display__color').style.color = '#333';
-
-      break;
-    case 'Clear':
-      document.querySelector('.current-display__icon--img').src = 'images/animated/day.svg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/clear-day.jpg';
-      document.querySelector('.current-display__background').style.filter = 'brightness(90%)';
-      document.querySelector('.current-display__color').style.color = '#333';
-
-      break;
-    case 'Clouds':
-      document.querySelector('.current-display__icon--img').src = 'images/animated/cloudy.svg';
-      document.querySelector('.current-display__background').src = 'images/backgrounds/cloudy-day.jpg';
-      document.querySelector('.current-display__color').style.color = '#fff';
-      document.querySelector('.current-display__background').style.filter = 'brightness(70%)';
-      break;
+  if (currentDesc === 'Thunderstorm') {
+    document.querySelector('.current-display__icon').src = 'images/animated/thunder.svg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/storm.jpg';
+    document.querySelector('.current-display').style.color = '#fff';
+  } else if (currentDesc === 'Drizzle') {
+    document.querySelector('.current-display__icon').src = 'images/animated/drizzle.svg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
+    document.querySelector('.current-display').style.color = '#333';
+  } else if (currentDesc === 'Rain') {
+    document.querySelector('.current-display__icon').src = 'images/animated/rainy.svg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
+    document.querySelector('.current-display').style.color = '#333';
+  } else if (currentDesc === 'Snow') {
+    document.querySelector('.current-display__icon').src = 'images/animated/snowy.svg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/snow.jpg';
+    document.querySelector('.current-display').style.color = '#fff';
+  } else if (currentDesc === 'Clear') {
+    document.querySelector('.current-display__icon').src = 'images/animated/day.svg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/clear-day.jpg';
+    document.querySelector('.current-display').style.color = '#333';
+  } else if (currentDesc === 'Clouds') {
+    document.querySelector('.current-display__icon').src = 'images/animated/cloudy.svg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/cloudy-day.jpg';
+    document.querySelector('.current-display').style.color = '#fff';
+  } else if (currentDesc === 'Mist' || 'Smoke' || 'Haze' || 'Dust' || 'Fog' || 'Sand' || 'Ash' || 'Squall' || 'Tornado') {
+    document.querySelector('.current-display__icon').src = 'images/animated/foggy.jpg';
+    document.querySelector('.current-display__background').src = 'images/backgrounds/fog.jpg';
+    document.querySelector('.current-display__color').style.color = '#333';
   }
 
   let day = [];

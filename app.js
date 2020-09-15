@@ -36,6 +36,8 @@ exclude=minutely,hourly&appid=${weatherKey}`;
   const currentWindSpeed = Math.round(weatherData.current.wind_speed);
   const currentWindDir = weatherData.current.wind_deg;
 
+  console.log(currentDesc);
+
   // current conditions display
   document.querySelector('.current-display__date').innerHTML = currentDate;
   document.querySelector('.current-display__location').innerHTML = `${city}, ${state}`;
@@ -84,9 +86,9 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     document.querySelector('.current-display__background').src = 'images/backgrounds/cloudy-day.jpg';
     document.querySelector('.current-display').style.color = '#fff';
   } else if (currentDesc === 'Mist' || 'Smoke' || 'Haze' || 'Dust' || 'Fog' || 'Sand' || 'Ash' || 'Squall' || 'Tornado') {
-    document.querySelector('.current-display__icon').src = 'images/animated/foggy.jpg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/foggy.jpg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/fog.jpg';
-    document.querySelector('.current-display__color').style.color = '#333';
+    document.querySelector('.current-display').style.color = '#333';
   }
 
   let day = [];

@@ -1,14 +1,16 @@
 .forecast {
   &__display {
     position: relative;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
     height: 34%;
   }
 
   &__card {
     position: relative;
-    float: left;
     width: 13%;
-    margin: 0 8.5px;
     height: 100%;
     background-color: $color-gray-light-1;
     border-radius: 10px;

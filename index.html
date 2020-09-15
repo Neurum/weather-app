@@ -11,7 +11,7 @@ s<!DOCTYPE html>
   </head>
   <body>
     <div class="display-area">
-      <img src="images/backgrounds/clear-day.jpg" class="current-display__background" alt="" />
+      <img src="images/backgrounds/clear-day.jpg" class="current-display__background current-display__color" alt="" />
 
       <div class="input-area">
         <form class="input-area__form" autocomplete="off" onsubmit="return false;">
@@ -22,16 +22,18 @@ s<!DOCTYPE html>
       </div>
 
       <div class="current-display">
-        <div class="current-display__date"></div>
-        <div class="current-display__location"></div>
-        <div class="current-display__desc"></div>
-        <div class="current-display__temp"><span class="current-display__temp--main"></span><span class="current-display__temp--feels"></span></div>
+        <div class="current-display__date current-display__color"></div>
+        <div class="current-display__location current-display__color"></div>
+        <div class="current-display__desc current-display__color"></div>
+        <div class="current-display__temp current-display__color">
+          <span class="current-display__temp--main"></span><span class="current-display__temp--feels current-display__color"></span>
+        </div>
         <div class="current-display__icon">
           <img src="images/animated/day.svg" class="current-display__icon--img" alt="icon" />
         </div>
 
-        <div class="current-display__hum"></div>
-        <div class="current-display__wind">
+        <div class="current-display__hum current-display__color"></div>
+        <div class="current-display__wind current-display__color">
           <span class="current-display__wind--speed"></span>
           <span class="current-display__wind--dir"></span>
         </div>

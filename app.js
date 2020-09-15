@@ -36,8 +36,6 @@ exclude=minutely,hourly&appid=${weatherKey}`;
   const currentWindSpeed = Math.round(weatherData.current.wind_speed);
   const currentWindDir = weatherData.current.wind_deg;
 
-  console.log(currentDesc);
-
   // current conditions display
   document.querySelector('.current-display__date').innerHTML = currentDate;
   document.querySelector('.current-display__location').innerHTML = `${city}, ${state}`;
@@ -89,6 +87,8 @@ exclude=minutely,hourly&appid=${weatherKey}`;
     document.querySelector('.current-display__icon--img').src = 'images/animated/foggy.jpg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/fog.jpg';
     document.querySelector('.current-display').style.color = '#333';
+    document.querySelector('.current-display__icon').style.width = '15rem';
+    document.querySelector('.current-display__icon').style.height = '15rem';
   }
 
   let day = [];
@@ -163,6 +163,8 @@ exclude=minutely,hourly&appid=${weatherKey}`;
   for (let i = 1; i <= 7; i++) {
     document.querySelector(`.low-day-${i}`).innerHTML = `Low: ${forLowDay[i]}&deg;F`;
   }
+
+  console.log(weatherData);
 
   // Reset form
   document.querySelector('.input-area__form').reset();

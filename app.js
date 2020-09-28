@@ -60,27 +60,27 @@ exclude=minutely,hourly&appid=${weatherKey}`;
   }
 
   if (currentDesc === 'Thunderstorm') {
-    document.querySelector('.current-display__icon').src = 'images/animated/thunder.svg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/thunder.svg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/storm.jpg';
     document.querySelector('.current-display').style.color = '#fff';
   } else if (currentDesc === 'Drizzle') {
-    document.querySelector('.current-display__icon').src = 'images/animated/drizzle.svg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/drizzle.svg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
     document.querySelector('.current-display').style.color = '#333';
   } else if (currentDesc === 'Rain') {
-    document.querySelector('.current-display__icon').src = 'images/animated/rainy.svg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/rainy.svg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/rain.jpg';
     document.querySelector('.current-display').style.color = '#333';
   } else if (currentDesc === 'Snow') {
-    document.querySelector('.current-display__icon').src = 'images/animated/snowy.svg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/snowy.svg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/snow.jpg';
     document.querySelector('.current-display').style.color = '#fff';
   } else if (currentDesc === 'Clear') {
-    document.querySelector('.current-display__icon').src = 'images/animated/day.svg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/day.svg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/clear-day.jpg';
     document.querySelector('.current-display').style.color = '#333';
   } else if (currentDesc === 'Clouds') {
-    document.querySelector('.current-display__icon').src = 'images/animated/cloudy.svg';
+    document.querySelector('.current-display__icon--img').src = 'images/animated/cloudy.svg';
     document.querySelector('.current-display__background').src = 'images/backgrounds/cloudy-day.jpg';
     document.querySelector('.current-display').style.color = '#fff';
   } else if (currentDesc === 'Mist' || 'Smoke' || 'Haze' || 'Dust' || 'Fog' || 'Sand' || 'Ash' || 'Squall' || 'Tornado') {

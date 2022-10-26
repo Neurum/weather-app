@@ -5,7 +5,7 @@ let long = '';
 const today = new Date();
 const currentDate = today.toDateString();
 
-const geoKey = 'ade29332ee9141dd84c4cfa731c7b5ab';
+const geoKey = '61163118a3634074990110c6627471bd';
 const weatherKey = '674266fd65a2456ae14430679807cc39';
 
 let getWeather = async () => {

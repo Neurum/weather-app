@@ -11,7 +11,7 @@ const weatherKey = '674266fd65a2456ae14430679807cc39';
 let getWeather = async () => {
   city = document.querySelector('.input-area__city').value;
   state = document.querySelector('.input-area__state').value;
-  const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${city}%2C${state}&key=${geoKey}`;
+  const geoURL = `https://api.opencagedata.com/geocode/v1/json?q=${city}%2C%20${state}&key=${geoKey}`;
 
   // make fetch call (promise call)
   const geoResponse = await fetch(geoURL);
